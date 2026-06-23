@@ -1,0 +1,360 @@
+Use this as your **master prompt** to build the SharePoint repository for ATLAS AI. This version is designed specifically so that **ATLAS AI performs the intelligence and calculations**, while SharePoint stores only raw project data.
+
+---
+
+# Create SharePoint Repository for ATLAS AI
+
+Create a professional enterprise SharePoint site named:
+
+# ATLAS AI Hub
+
+### Advanced Tracking, Leadership & Analytics System
+
+The site will act as the centralized project governance and intelligence repository for ATLAS AI.
+
+The repository must contain realistic enterprise project management data and support project monitoring, risk management, governance compliance, resource management, release readiness assessment, executive reporting, and leadership analytics.
+
+The repository must store only raw operational data. No calculated values such as project health scores, project status ratings, release readiness scores, risk ratings, portfolio scores, or executive ratings should be stored. These values will be calculated dynamically by ATLAS AI.
+
+All information must remain within Microsoft 365 and represent a realistic enterprise project delivery environment.
+
+---
+
+# Create SharePoint List 1: Project Registry
+
+Purpose: Store project master data.
+
+Columns:
+
+* Project ID
+* Project Name
+* Project Manager
+* Business Unit
+* Project Type
+* Project Phase
+* Priority
+* Start Date
+* Target End Date
+
+Create at least 5 realistic projects.
+
+Example project names:
+
+* OAC Migration
+* FDI Analytics Platform
+* Enterprise Reporting Hub
+* CRM Modernization
+* Data Warehouse Transformation
+
+---
+
+# Create SharePoint List 2: Project Progress Tracker
+
+Purpose: Store project progress by phase.
+
+Columns:
+
+* Project ID
+* Project Name
+* Phase
+* Planned Completion Percentage
+* Actual Completion Percentage
+* Last Updated Date
+
+Phase Values:
+
+* Requirements
+* Design
+* Development
+* Testing
+* UAT
+* Deployment
+* Hypercare
+
+Create realistic data where some projects are ahead, some on track, and some delayed.
+
+Example:
+
+Project: Enterprise Reporting Hub
+
+Requirements: 100%
+
+Design: 100%
+
+Development: 90%
+
+Testing: 55%
+
+UAT: 20%
+
+Deployment: 0%
+
+---
+
+# Create SharePoint List 3: Task Tracker
+
+Purpose: Track project activities.
+
+Columns:
+
+* Task ID
+* Project Name
+* Task Name
+* Assigned To
+* Priority
+* Due Date
+* Status
+* Last Updated Date
+
+Status Values:
+
+* Not Started
+* In Progress
+* Completed
+* Blocked
+* On Hold
+
+Create at least 25 sample tasks.
+
+Include:
+
+* Completed tasks
+* Delayed tasks
+* Blocked tasks
+* Overdue tasks
+
+---
+
+# Create SharePoint List 4: Risk Register
+
+Purpose: Store project risks.
+
+Columns:
+
+* Risk ID
+* Project Name
+* Risk Description
+* Severity
+* Probability
+* Risk Owner
+* Status
+
+Severity Values:
+
+* Low
+* Medium
+* High
+* Critical
+
+Create realistic project risks with a mix of open and closed records.
+
+---
+
+# Create SharePoint List 5: Approval Tracker
+
+Purpose: Track project approvals.
+
+Columns:
+
+* Approval ID
+* Project Name
+* Approval Type
+* Requested Date
+* Approver
+* Status
+
+Status Values:
+
+* Pending
+* Approved
+* Rejected
+
+Approval Types:
+
+* Security Approval
+* Architecture Approval
+* UAT Signoff
+* Release Approval
+* Compliance Approval
+
+Include examples of delayed approvals.
+
+---
+
+# Create SharePoint List 6: Milestone Tracker
+
+Purpose: Track project milestones.
+
+Columns:
+
+* Milestone ID
+* Project Name
+* Milestone Name
+* Planned Date
+* Actual Date
+* Status
+
+Status Values:
+
+* On Track
+* Delayed
+* Completed
+
+Create realistic milestone data across all projects.
+
+---
+
+# Create SharePoint List 7: Defect Tracker
+
+Purpose: Support release readiness analysis.
+
+Columns:
+
+* Defect ID
+* Project Name
+* Severity
+* Assigned To
+* Status
+
+Severity Values:
+
+* Critical
+* High
+* Medium
+* Low
+
+Status Values:
+
+* Open
+* In Progress
+* Closed
+
+Include open critical defects for at least one project.
+
+---
+
+# Create SharePoint List 8: Resource Tracker
+
+Purpose: Track workload and allocation.
+
+Columns:
+
+* Employee Name
+* Role
+* Project Name
+* Active Tasks
+* Allocation Percentage
+
+Create realistic workload distributions.
+
+Some resources should have high utilization to support workload analysis.
+
+---
+
+# Create SharePoint List 9: Meeting Action Tracker
+
+Purpose: Track meeting decisions and actions.
+
+Columns:
+
+* Meeting Name
+* Action Item
+* Owner
+* Due Date
+* Status
+
+Status Values:
+
+* Open
+* In Progress
+* Completed
+* Overdue
+
+Create realistic meeting action records.
+
+---
+
+# Create Document Libraries
+
+Create the following document libraries:
+
+* Requirements Documents
+* Design Documents
+* Test Reports
+* Release Documents
+* Governance Artifacts
+* Meeting Summaries
+* Executive Reports
+
+Populate each library with realistic enterprise sample documents and metadata.
+
+---
+
+# Meeting Summaries Library
+
+Create meeting notes containing:
+
+* Meeting Objective
+* Key Decisions
+* Action Items
+* Risks Identified
+* Owners
+* Due Dates
+* Follow-up Actions
+
+These notes should support ATLAS AI meeting intelligence capabilities.
+
+---
+
+# Create Dashboard Page
+
+Create a homepage named:
+
+# ATLAS Executive Dashboard
+
+Display:
+
+* Active Projects
+* Open Tasks
+* Open Risks
+* Pending Approvals
+* Upcoming Milestones
+* Resource Allocation Overview
+* Recent Meeting Actions
+
+Do not display any pre-calculated health scores or readiness scores.
+
+---
+
+# ATLAS AI Intelligence Requirements
+
+The SharePoint repository must provide only raw project delivery data.
+
+ATLAS AI will dynamically calculate:
+
+* Project Health Score
+* Project Status
+* Release Readiness Score
+* Portfolio Health
+* Governance Compliance Status
+* Risk Severity Analysis
+* Resource Risk
+* Delivery Risk Forecast
+* Leadership Insights
+* Executive Recommendations
+
+No calculated intelligence values should be stored in SharePoint.
+
+---
+
+# Security Requirements
+
+All content must remain within Microsoft 365.
+
+No external sources, websites, APIs, or third-party repositories should be used.
+
+The repository should simulate a real enterprise PMO and project governance environment suitable for demonstrating ATLAS AI capabilities.
+
+---
+
+This prompt will give you a SharePoint structure that supports all the ATLAS AI features you've designed and allows the agent to genuinely analyze project data rather than simply reading stored scores.
