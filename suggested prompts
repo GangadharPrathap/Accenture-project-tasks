@@ -1,0 +1,190 @@
+For a **Project Pulse AI – Delivery Governance Agent**, the suggested prompts should feel like questions a Project Manager, Team Lead, Scrum Master, or Delivery Manager would actually ask.
+
+## 1. Project Status Overview
+
+**Title:** Project Status Summary
+
+**Message:**
+
+> Show the current status of all active projects, including progress, health score, open risks, blockers, and upcoming milestones.
+
+---
+
+## 2. Project Health Check
+
+**Title:** Project Health Score
+
+**Message:**
+
+> Calculate the project health score and explain the key factors affecting the score, including delays, risks, blockers, and pending approvals.
+
+---
+
+## 3. Overdue Tasks
+
+**Title:** Overdue Task Analysis
+
+**Message:**
+
+> Show all overdue tasks, task owners, due dates, project names, and recommended actions to resolve delays.
+
+---
+
+## 4. Risk Assessment
+
+**Title:** Project Risk Report
+
+**Message:**
+
+> Identify current project risks, severity levels, business impact, owners, and recommended mitigation actions.
+
+---
+
+## 5. Release Readiness Review
+
+**Title:** Release Readiness Check
+
+**Message:**
+
+> Assess release readiness by reviewing testing status, documentation completion, approvals, open defects, and security sign-offs.
+
+---
+
+## 6. Meeting Action Items
+
+**Title:** Meeting Action Summary
+
+**Message:**
+
+> Extract decisions, action items, owners, due dates, and follow-up actions from the latest meeting notes or transcript.
+
+---
+
+## 7. Weekly Project Report
+
+**Title:** Weekly Governance Report
+
+**Message:**
+
+> Generate a weekly project governance report including project status, completed work, delayed activities, risks, blockers, and recommendations.
+
+---
+
+## 8. Delayed Activities
+
+**Title:** Delayed Activities Review
+
+**Message:**
+
+> Identify all delayed activities across projects and provide the reason, owner, impact, and recovery recommendations.
+
+---
+
+## 9. Open Blockers
+
+**Title:** Blocker Analysis
+
+**Message:**
+
+> Show all open blockers, impacted projects, responsible owners, expected resolution dates, and associated risks.
+
+---
+
+## 10. Resource Workload Review
+
+**Title:** Resource Utilization
+
+**Message:**
+
+> Analyze project assignments and identify team members with overloaded workloads or multiple overdue tasks.
+
+---
+
+## 11. Approval Bottlenecks
+
+**Title:** Approval Status Review
+
+**Message:**
+
+> Identify pending approvals, approval owners, aging duration, and any approvals that may impact delivery timelines.
+
+---
+
+## 12. Executive Project Dashboard
+
+**Title:** Executive Summary
+
+**Message:**
+
+> Provide an executive-level summary of project performance, risks, release readiness, overdue work, and key management actions required.
+
+---
+
+## 13. Upcoming Milestones
+
+**Title:** Milestone Tracker
+
+**Message:**
+
+> Show upcoming project milestones, planned completion dates, dependencies, and any risks affecting milestone delivery.
+
+---
+
+## 14. Project Risk Prediction
+
+**Title:** Delivery Risk Forecast
+
+**Message:**
+
+> Analyze current project conditions and identify activities that may cause future schedule or delivery risks.
+
+---
+
+## 15. Assigned Action Items
+
+**Title:** My Assigned Actions
+
+**Message:**
+
+> Show all action items assigned to me, their status, due dates, priority levels, and any overdue work.
+
+---
+
+## 16. Governance Compliance Check
+
+**Title:** Governance Review
+
+**Message:**
+
+> Verify whether project governance requirements, approvals, documentation, and reviews have been completed.
+
+---
+
+## 17. Release Approval Status
+
+**Title:** Release Approval Tracker
+
+**Message:**
+
+> Show the status of all release approvals and identify any pending sign-offs that may delay deployment.
+
+---
+
+## 18. Project Manager Daily Brief
+
+**Title:** Daily Delivery Brief
+
+**Message:**
+
+> Summarize today's project activities, overdue tasks, risks, blockers, approvals, and critical actions requiring attention.
+
+---
+
+### Best 4 to Display on the Agent Home Screen
+
+1. **Project Status Summary**
+2. **Project Health Score**
+3. **Weekly Governance Report**
+4. **Release Readiness Check**
+
+These four immediately demonstrate the agent's value during a live showcase or manager demo.
