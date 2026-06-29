@@ -1,0 +1,173 @@
+You are a Data Warehouse and Oracle SQL data generation expert.
+
+Generate realistic HR Analytics dummy data for an enterprise organization. The data should be relational and consistent across all tables so that foreign keys are valid and the dataset can be directly imported into Oracle Database.
+
+Requirements
+
+Generate data for the following tables:
+
+1. DIM_DEPARTMENT
+
+Generate exactly 5 rows.
+
+Columns:
+
+DEPT_ID
+DEPARTMENT_NAME
+COST_CENTER
+LOCATION
+BUSINESS_UNIT
+
+Departments should include examples such as:
+
+Information Technology
+Human Resources
+Finance
+Sales
+Operations
+
+Use different business units and locations.
+
+2. DIM_CALENDAR
+
+Generate 100 rows.
+
+Columns:
+
+DAY_ID
+FULL_DATE
+MONTH
+QUARTER
+YEAR
+
+Generate dates covering the years 2023–2026.
+
+DAY_ID should be unique.
+
+3. DIM_EMPLOYEE (SCD Type 2)
+
+Generate 100 rows.
+
+Columns:
+
+EMP_SK
+EMP_ID
+EMP_NAME
+GENDER
+AGE
+DEPT_ID
+DESIGNATION
+HIRE_DATE
+EFFECTIVE_START_DATE
+EFFECTIVE_END_DATE
+CURRENT_FLAG
+
+Requirements
+
+Use surrogate key EMP_SK.
+EMP_ID represents the real employee.
+Around 80 unique employees.
+Around 20 additional rows should represent SCD Type 2 history where employees received promotions.
+Current rows should have CURRENT_FLAG='Y' and EFFECTIVE_END_DATE=NULL.
+Historical rows should have CURRENT_FLAG='N' with valid EFFECTIVE_END_DATE.
+Promotions should change DESIGNATION, for example:
+Software Engineer → Senior Software Engineer
+HR Executive → HR Manager
+Financial Analyst → Senior Financial Analyst
+Sales Executive → Sales Manager
+Ages between 22 and 60.
+Random gender distribution.
+Employees should be distributed across all departments.
+4. FACT_PERFORMANCE
+
+Generate 100 rows.
+
+Columns:
+
+PERFORMANCE_ID
+EMP_SK
+REVIEW_DATE
+RATING_SCORE
+KPI_PERCENTAGE
+MANAGER_SK
+PROMOTION_FLAG
+
+Requirements
+
+One review per employee per year where applicable.
+REVIEW_DATE between 2023 and 2026.
+RATING_SCORE between 1 and 5.
+KPI_PERCENTAGE between 50 and 100.
+Around 20% of reviews should have PROMOTION_FLAG='Y'.
+MANAGER_SK should reference an existing EMP_SK.
+Every EMP_SK must exist in DIM_EMPLOYEE.
+5. FACT_ATTRITION
+
+Generate 100 rows.
+
+Columns:
+
+ATTRITION_ID
+EMP_SK
+EXIT_DATE
+EXIT_REASON
+NOTICE_PERIOD
+REPLACEMENT_COST
+REGRETTABLE_ATTRITION
+
+Requirements
+
+EXIT_REASON values:
+
+Voluntary
+Involuntary
+Retirement
+
+NOTICE_PERIOD
+
+Between 0 and 90 days.
+
+REPLACEMENT_COST
+
+Between 50,000 and 800,000.
+
+REGRETTABLE_ATTRITION
+
+Y or N.
+
+EXIT_DATE
+
+Between 2023 and 2026.
+
+Only employees who have actually left should appear in this table.
+
+Data Quality Rules
+Maintain referential integrity.
+Every DEPT_ID must exist in DIM_DEPARTMENT.
+Every EMP_SK in fact tables must exist in DIM_EMPLOYEE.
+MANAGER_SK must also reference DIM_EMPLOYEE.
+Historical employee records should never have CURRENT_FLAG='Y'.
+Current records should have EFFECTIVE_END_DATE=NULL.
+Promotion records should create a new SCD Type 2 employee version.
+Ensure employees are distributed realistically across all departments.
+Generate varied performance ratings, promotion outcomes, and attrition reasons to support meaningful analytics.
+Output Format
+
+Generate the data as separate CSV files or SQL INSERT statements for each table in the following order:
+
+DIM_DEPARTMENT
+DIM_CALENDAR
+DIM_EMPLOYEE
+FACT_PERFORMANCE
+FACT_ATTRITION
+
+Ensure the generated data is immediately usable for Oracle Database import and supports the following analytics:
+
+Department-wise attrition rate
+Performance vs. attrition comparison
+Replacement cost by business unit
+Promotion followed by attrition within 12 months
+Oracle Analytics Cloud dashboards and visualizations
+Alternative (Recommended)
+
+Instead of asking Copilot to generate all five tables at once, generate one table at a time with the same constraints. This typically produces cleaner, more accurate data and avoids truncation limits. Start with DIM_DEPARTMENT, then DIM_CALENDAR, followed by DIM_EMPLOYEE, FACT_PERFORMANCE, and finally FACT_ATTRITION.
