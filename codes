@@ -1,0 +1,178 @@
+Yes. Since you're using **Oracle APEX**, the best practice is to create **Views** for each business question. Then you can directly use those views in Oracle Analytics Cloud (OAC) or APEX charts without rewriting the SQL.
+
+---
+
+# View 1 – Department with Highest Attrition (Last 2 Years)
+
+```sql
+CREATE OR REPLACE VIEW VW_ATTRITION_BY_DEPARTMENT AS
+SELECT
+    d.DEPARTMENT_NAME,
+    COUNT(fa.ATTRITION_ID) AS TOTAL_ATTRITIONS
+FROM FACT_ATTRITION fa
+JOIN DIM_DEPARTMENT d
+    ON fa.DEPT_SK = d.DEPT_SK
+JOIN DIM_CALENDER c
+    ON fa.DAY_SK = c.DAY_SK
+WHERE c.FULL_DATE >= ADD_MONTHS(SYSDATE, -24)
+GROUP BY d.DEPARTMENT_NAME;
+```
+
+### To View the Result
+
+```sql
+SELECT *
+FROM VW_ATTRITION_BY_DEPARTMENT
+ORDER BY TOTAL_ATTRITIONS DESC;
+```
+
+---
+
+# View 2 – Average Performance Rating by Exit Type
+
+```sql
+CREATE OR REPLACE VIEW VW_PERFORMANCE_EXIT_ANALYSIS AS
+SELECT
+    fa.EXIT_REASON_CATEGORY,
+    ROUND(AVG(fp.RATING_SCORE),2) AS AVERAGE_RATING
+FROM FACT_ATTRITION fa
+JOIN FACT_PERFORMANCE fp
+    ON fa.EMP_SK = fp.EMP_SK
+WHERE fa.EXIT_REASON_CATEGORY IN ('Voluntary','Involuntary')
+GROUP BY fa.EXIT_REASON_CATEGORY;
+```
+
+### To View the Result
+
+```sql
+SELECT *
+FROM VW_PERFORMANCE_EXIT_ANALYSIS;
+```
+
+---
+
+# View 3 – Replacement Cost by Business Unit
+
+```sql
+CREATE OR REPLACE VIEW VW_REPLACEMENT_COST AS
+SELECT
+    d.BUSINESS_UNIT,
+    SUM(fa.ESTIMATED_REPLACEMENT_COST) AS TOTAL_REPLACEMENT_COST
+FROM FACT_ATTRITION fa
+JOIN DIM_DEPARTMENT d
+    ON fa.DEPT_SK = d.DEPT_SK
+JOIN DIM_CALENDER c
+    ON fa.DAY_SK = c.DAY_SK
+WHERE c.YEAR = EXTRACT(YEAR FROM ADD_MONTHS(SYSDATE,-12))
+GROUP BY d.BUSINESS_UNIT;
+```
+
+### To View the Result
+
+```sql
+SELECT *
+FROM VW_REPLACEMENT_COST
+ORDER BY TOTAL_REPLACEMENT_COST DESC;
+```
+
+---
+
+# View 4 – Promotion vs Attrition Within 12 Months
+
+```sql
+CREATE OR REPLACE VIEW VW_PROMOTION_ATTRITION AS
+SELECT
+    ROUND(
+        COUNT(DISTINCT fa.EMP_SK) * 100 /
+        COUNT(DISTINCT fp.EMP_SK),
+        2
+    ) AS ATTRITION_RATE_PERCENT
+FROM FACT_PERFORMANCE fp
+LEFT JOIN FACT_ATTRITION fa
+       ON fp.EMP_SK = fa.EMP_SK
+      AND fa.DAY_SK BETWEEN fp.DAY_SK
+                        AND fp.DAY_SK + 365
+WHERE fp.PROMOTION_FLAG = 'Y';
+```
+
+### To View the Result
+
+```sql
+SELECT *
+FROM VW_PROMOTION_ATTRITION;
+```
+
+---
+
+# Bonus Views (Recommended for OAC Dashboard)
+
+## Attrition by Department
+
+```sql
+CREATE OR REPLACE VIEW VW_DEPARTMENT_ATTRITION AS
+SELECT
+    d.DEPARTMENT_NAME,
+    COUNT(*) AS ATTRITIONS
+FROM FACT_ATTRITION fa
+JOIN DIM_DEPARTMENT d
+ON fa.DEPT_SK=d.DEPT_SK
+GROUP BY d.DEPARTMENT_NAME;
+```
+
+---
+
+## Average KPI by Department
+
+```sql
+CREATE OR REPLACE VIEW VW_DEPARTMENT_KPI AS
+SELECT
+    d.DEPARTMENT_NAME,
+    ROUND(AVG(fp.KPI_ACHIEVEMENT_PERCENTAGE),2) AVG_KPI
+FROM FACT_PERFORMANCE fp
+JOIN DIM_DEPARTMENT d
+ON fp.DEPT_SK=d.DEPT_SK
+GROUP BY d.DEPARTMENT_NAME;
+```
+
+---
+
+## Performance Rating Distribution
+
+```sql
+CREATE OR REPLACE VIEW VW_PERFORMANCE_DISTRIBUTION AS
+SELECT
+    RATING_SCORE,
+    COUNT(*) TOTAL_EMPLOYEES
+FROM FACT_PERFORMANCE
+GROUP BY RATING_SCORE;
+```
+
+---
+
+## Attrition Type Distribution
+
+```sql
+CREATE OR REPLACE VIEW VW_ATTRITION_TYPE AS
+SELECT
+    EXIT_REASON_CATEGORY,
+    COUNT(*) TOTAL_EMPLOYEES
+FROM FACT_ATTRITION
+GROUP BY EXIT_REASON_CATEGORY;
+```
+
+---
+
+# Recommended Views for Your Project
+
+| View Name                      | Purpose             |
+| ------------------------------ | ------------------- |
+| `VW_ATTRITION_BY_DEPARTMENT`   | Business Question 1 |
+| `VW_PERFORMANCE_EXIT_ANALYSIS` | Business Question 2 |
+| `VW_REPLACEMENT_COST`          | Business Question 3 |
+| `VW_PROMOTION_ATTRITION`       | Business Question 4 |
+| `VW_DEPARTMENT_ATTRITION`      | Dashboard           |
+| `VW_DEPARTMENT_KPI`            | Dashboard           |
+| `VW_PERFORMANCE_DISTRIBUTION`  | Dashboard           |
+| `VW_ATTRITION_TYPE`            | Dashboard           |
+
+These views can be used directly as the data source for tables, charts, and visualizations in Oracle APEX or Oracle Analytics Cloud.
