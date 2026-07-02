@@ -1,52 +1,62 @@
-Update Slide 3 in the uploaded Accenture PowerPoint presentation.
+Update the next slide in the uploaded Accenture PowerPoint presentation.
 
 IMPORTANT INSTRUCTIONS
 
-• Use the existing Accenture template only.
-• Choose the most suitable layout available within the template for presenting business context and project objectives.
-• If another layout in the template communicates this content more effectively, automatically switch to that layout while preserving the overall Accenture branding.
+• Generate the slide as quickly as possible.
+• Use only the layouts already available in the uploaded Accenture template.
+• Automatically choose the most suitable layout for explaining a solution architecture.
 • Do not create a custom design.
-• Do not change the theme, fonts, colors, icons, or slide master.
-• Maintain a clean executive consulting style suitable for presentation to senior Accenture managers.
+• Preserve the Accenture theme, fonts, colors, icons, spacing, placeholders, and slide master.
+• Keep the slide executive, clean, and highly visual.
+• Use SmartArt or process diagrams from the template if appropriate.
 
 Slide Title
 
-Business Challenge & Project Objectives
+Solution Overview & Architecture
 
 Slide Objective
 
-Explain why the HR Analytics solution was needed and what the project aimed to achieve. The slide should immediately communicate the business problem and the expected value of the solution.
+Explain how the proposed HR Analytics solution transforms disconnected HR data into actionable business insights through a centralized data warehouse.
 
 Content
 
-Business Challenge
+Solution Overview
 
-Employee, performance, and attrition data are maintained across multiple disconnected systems, making HR analytics difficult.
+The proposed solution integrates multiple HR data sources into a centralized analytics platform to enable consistent reporting, historical tracking, and data-driven decision-making.
 
-Key challenges include:
-• Fragmented employee data
-• Manual reporting and analysis
-• Limited visibility into attrition trends
-• Delayed and inconsistent HR decision-making
-• Difficulty measuring workforce performance and replacement costs
+Architecture Flow
 
-Project Objectives
+Employee Data
+↓
+Performance Review Data
+↓
+Attrition Data
+↓
+ETL / Data Integration
+↓
+Oracle Database (Data Warehouse)
+↓
+Oracle Analytics Cloud
+↓
+Interactive HR Dashboard
 
-The solution aims to:
-• Build a centralized HR Analytics Data Warehouse
-• Integrate employee, department, performance, and attrition data
-• Preserve employee history using SCD Type 2
-• Generate actionable business insights through analytics
-• Deliver interactive Oracle Analytics Cloud dashboards
+Key Capabilities
+
+• Centralized workforce data
+• Historical employee tracking using SCD Type 2
+• Enterprise reporting and analytics
+• Department-wise attrition analysis
+• Performance trend analysis
+• Executive dashboards for HR decision-making
 
 Visual Guidance
 
-• Replace the placeholder image with a professional business image showing HR professionals or executives analyzing workforce analytics.
-• Use icons only if the selected template layout supports them.
-• Emphasize Business Challenge and Project Objectives using the template's accent color.
-• Keep text concise with no long paragraphs.
-• Balance text and visuals to create an executive-style presentation.
+• Use a horizontal or vertical process flow from the Accenture template.
+• Replace placeholders with professional business icons representing data sources, database, analytics, and dashboards.
+• Keep text concise.
+• Emphasize "Centralized Data Warehouse" and "Oracle Analytics Cloud" using the template accent color.
+• Maintain a balance of visuals and text with generous whitespace.
 
 Final Output
 
-The slide should look like it was prepared by an Accenture consulting team for an executive client review. It should be visually clean, business-focused, and fully consistent with the existing presentation template.
+The slide should resemble an Accenture consulting architecture overview prepared for an executive client presentation, focusing on clarity, business value, and professionalism.
