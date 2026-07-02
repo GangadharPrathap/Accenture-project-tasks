@@ -16,20 +16,45 @@ GROUP BY d.DEPARTMENT_NAME;
 
 scatter plot for t
 
+WITH LATEST_PERFORMANCE AS
+(
+    SELECT fp.*
+    FROM FACT_PERFORMANCE fp
+    JOIN
+    (
+        SELECT
+            EMP_SK,
+            MAX(DAY_SK) MAX_DAY
+        FROM FACT_PERFORMANCE
+        GROUP BY EMP_SK
+    ) x
+    ON fp.EMP_SK=x.EMP_SK
+    AND fp.DAY_SK=x.MAX_DAY
+)
+
 SELECT
-    fp.RATING_SCORE,
+    lp.RATING_SCORE,
+
     CASE
-        WHEN fa.EMP_SK IS NULL THEN 'Stayed'
+        WHEN fa.EMP_SK IS NULL
+            THEN 'Stayed'
         ELSE 'Exited'
-    END AS EMPLOYEE_STATUS,
-    COUNT(DISTINCT fp.EMP_SK) AS EMPLOYEE_COUNT
-FROM FACT_PERFORMANCE fp
+    END EMPLOYEE_STATUS,
+
+    COUNT(*) EMPLOYEE_COUNT
+
+FROM LATEST_PERFORMANCE lp
+
 LEFT JOIN FACT_ATTRITION fa
-    ON fp.EMP_SK = fa.EMP_SK
+ON lp.EMP_SK=fa.EMP_SK
+
 GROUP BY
-    fp.RATING_SCORE,
+    lp.RATING_SCORE,
     CASE
-        WHEN fa.EMP_SK IS NULL THEN 'Stayed'
+        WHEN fa.EMP_SK IS NULL
+            THEN 'Stayed'
         ELSE 'Exited'
     END
-ORDER BY fp.RATING_SCORE, EMPLOYEE_STATUS;
+
+ORDER BY
+    lp.RATING_SCORE;
