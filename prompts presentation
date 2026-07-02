@@ -1,42 +1,52 @@
-Update the current slide while preserving the existing Accenture template, slide layout, fonts, colors, placeholders, spacing, and overall visual identity.
+Update Slide 3 in the uploaded Accenture PowerPoint presentation.
 
-Do not create a new slide. Modify only the content of the current slide.
+IMPORTANT INSTRUCTIONS
 
-Slide Title:
+• Use the existing Accenture template only.
+• Choose the most suitable layout available within the template for presenting business context and project objectives.
+• If another layout in the template communicates this content more effectively, automatically switch to that layout while preserving the overall Accenture branding.
+• Do not create a custom design.
+• Do not change the theme, fonts, colors, icons, or slide master.
+• Maintain a clean executive consulting style suitable for presentation to senior Accenture managers.
+
+Slide Title
+
 Business Challenge & Project Objectives
 
-Objective:
-Create a professional executive slide that explains why the HR Analytics project was required and what it aims to achieve. The slide should be suitable for presentation to senior Accenture managers and should use concise business language instead of academic explanations.
+Slide Objective
 
-Replace the existing placeholder image with a high-quality corporate image showing HR professionals or business leaders analyzing workforce data on dashboards in a modern office environment.
+Explain why the HR Analytics solution was needed and what the project aimed to achieve. The slide should immediately communicate the business problem and the expected value of the solution.
 
-Structure the content into two sections.
+Content
 
-Section 1: Business Challenge
+Business Challenge
 
-Use the following points:
+Employee, performance, and attrition data are maintained across multiple disconnected systems, making HR analytics difficult.
 
-• Employee, performance, and attrition data exist across multiple disconnected systems.
-• Manual reporting makes workforce analysis slow and inefficient.
-• HR teams lack a centralized view of employee performance and attrition trends.
-• Decision-making is delayed due to fragmented and inconsistent data.
+Key challenges include:
+• Fragmented employee data
+• Manual reporting and analysis
+• Limited visibility into attrition trends
+• Delayed and inconsistent HR decision-making
+• Difficulty measuring workforce performance and replacement costs
 
-Section 2: Project Objectives
+Project Objectives
 
-Use the following points:
+The solution aims to:
+• Build a centralized HR Analytics Data Warehouse
+• Integrate employee, department, performance, and attrition data
+• Preserve employee history using SCD Type 2
+• Generate actionable business insights through analytics
+• Deliver interactive Oracle Analytics Cloud dashboards
 
-• Build a centralized HR Analytics Data Warehouse.
-• Integrate employee, department, performance, and attrition data.
-• Enable historical employee tracking using SCD Type 2.
-• Develop analytics to answer key HR business questions.
-• Deliver interactive dashboards using Oracle Analytics Cloud.
+Visual Guidance
 
-Design Requirements
+• Replace the placeholder image with a professional business image showing HR professionals or executives analyzing workforce analytics.
+• Use icons only if the selected template layout supports them.
+• Emphasize Business Challenge and Project Objectives using the template's accent color.
+• Keep text concise with no long paragraphs.
+• Balance text and visuals to create an executive-style presentation.
 
-• Keep the slide clean and visually balanced.
-• Use concise bullet points.
-• Highlight important keywords such as Centralized Data Warehouse, SCD Type 2, and Oracle Analytics Cloud using the existing Accenture accent color.
-• Use consistent spacing and alignment.
-• Maintain sufficient whitespace.
-• Do not include SQL queries, ER diagrams, or technical implementation details on this slide.
-• The slide should communicate business value and project objectives clearly.
+Final Output
+
+The slide should look like it was prepared by an Accenture consulting team for an executive client review. It should be visually clean, business-focused, and fully consistent with the existing presentation template.
