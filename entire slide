@@ -1,0 +1,481 @@
+You are a Senior Presentation Designer, Enterprise Solution Architect, and Management Consultant with expertise in Microsoft PowerPoint, Data Warehousing, Oracle Analytics Cloud, Business Intelligence, and Executive Storytelling.
+
+Your task is to create a complete, professional presentation for my internship project.
+
+IMPORTANT REQUIREMENTS
+
+• Do NOT create a basic academic presentation.
+• Create an executive-level presentation suitable for Senior Managers with 15+ years of industry experience.
+• The presentation should resemble a client presentation prepared by an Accenture consulting team.
+• Use modern PowerPoint design principles.
+• Keep every slide visually clean and professional.
+• Maximum visual impact with minimal text.
+• Use diagrams, icons, SmartArt, process flows, timelines, and professional layouts wherever appropriate.
+• Avoid large paragraphs.
+• Use concise business language.
+• Do NOT include SQL queries, CREATE TABLE statements, DDL, or code.
+• Focus on business value, architecture, analytics, implementation, and outcomes.
+
+------------------------------------------------------------
+
+DESIGN STYLE
+
+Theme
+
+Modern Enterprise
+
+Background
+
+White (#FFFFFF)
+
+Primary Color
+
+Deep Navy (#1E3A5F)
+
+Accent Color
+
+Purple (#A100FF)
+
+Secondary Color
+
+Dark Gray (#333333)
+
+Typography
+
+Poppins
+Aptos
+Segoe UI
+
+Style
+
+Minimal
+
+Professional
+
+Corporate
+
+Technology-focused
+
+Premium
+
+Executive
+
+Large whitespace
+
+Large visuals
+
+Rounded cards where appropriate
+
+Subtle icons
+
+Modern SmartArt
+
+Clean charts
+
+No gradients
+
+No unnecessary animations
+
+------------------------------------------------------------
+
+VISUAL REQUIREMENTS
+
+Automatically choose the best layout for every slide.
+
+Automatically insert high-quality professional corporate images.
+
+Images should include
+
+HR professionals
+
+Business meetings
+
+Enterprise offices
+
+Workforce collaboration
+
+Data analytics
+
+Business dashboards
+
+Digital transformation
+
+Oracle Analytics
+
+Business Intelligence
+
+Do not use
+
+Clipart
+
+Cartoons
+
+Artificial-looking graphics
+
+------------------------------------------------------------
+
+PROJECT
+
+Title
+
+HR Analytics:
+Employee Performance & Attrition Analysis
+
+Subtitle
+
+Building Data-Driven HR Insights through Enterprise Analytics
+
+------------------------------------------------------------
+
+PROJECT OVERVIEW
+
+The project aims to build a centralized HR Analytics Data Warehouse to integrate employee, department, performance, and attrition data from multiple systems.
+
+The solution enables historical employee tracking using Slowly Changing Dimension Type 2 (SCD Type 2), supports business intelligence reporting through Oracle SQL Views, and provides interactive dashboards using Oracle Analytics Cloud.
+
+------------------------------------------------------------
+
+TECHNOLOGY
+
+Oracle Database
+
+Oracle SQL
+
+Oracle Analytics Cloud
+
+Data Warehousing
+
+Business Intelligence
+
+Star Schema
+
+Slowly Changing Dimension Type 2
+
+------------------------------------------------------------
+
+DATABASE DESIGN
+
+Dimension Tables
+
+DIM_EMPLOYEE
+
+DIM_DEPARTMENT
+
+DIM_CALENDER
+
+Fact Tables
+
+FACT_PERFORMANCE
+
+FACT_ATTRITION
+
+------------------------------------------------------------
+
+DATASET
+
+DIM_EMPLOYEE
+550 Records
+
+DIM_DEPARTMENT
+5 Records
+
+DIM_CALENDER
+1461 Records
+
+FACT_PERFORMANCE
+1000 Records
+
+FACT_ATTRITION
+100 Records
+
+------------------------------------------------------------
+
+BUSINESS QUESTIONS
+
+Which department has the highest employee attrition?
+
+What is the average performance rating for voluntary versus involuntary exits?
+
+What is the total replacement cost by business unit?
+
+What is the attrition trend for employees promoted during the past three years?
+
+------------------------------------------------------------
+
+GENERATE THIS PRESENTATION
+
+Slide 1
+
+Executive Cover Page
+
+Professional title
+
+Subtitle
+
+Presenter details
+
+Professional enterprise background image
+
+------------------------------------------------------------
+
+Slide 2
+
+Agenda
+
+Business Context
+
+Project Objectives
+
+Solution Design
+
+Implementation
+
+Business Analytics
+
+Dashboard
+
+Business Outcomes
+
+------------------------------------------------------------
+
+Slide 3
+
+Business Challenge
+
+Explain
+
+Current HR problems
+
+Data fragmentation
+
+Manual reporting
+
+Business impact
+
+Professional HR analytics image
+
+------------------------------------------------------------
+
+Slide 4
+
+Project Objectives
+
+Use icons or SmartArt
+
+Build centralized warehouse
+
+Integrate HR data
+
+Historical tracking
+
+Business analytics
+
+Interactive dashboards
+
+------------------------------------------------------------
+
+Slide 5
+
+Solution Overview
+
+High-level architecture
+
+Employee Data
+
+Performance Data
+
+Attrition Data
+
+↓
+
+ETL
+
+↓
+
+Oracle Database
+
+↓
+
+Data Warehouse
+
+↓
+
+Oracle Analytics Cloud
+
+↓
+
+Executive Dashboard
+
+Use a professional process flow.
+
+------------------------------------------------------------
+
+Slide 6
+
+Data Warehouse Design
+
+Large Star Schema
+
+Reserve space for ER Diagram
+
+Explain
+
+Dimension Tables
+
+Fact Tables
+
+Relationships
+
+Surrogate Keys
+
+------------------------------------------------------------
+
+Slide 7
+
+SCD Type 2
+
+Explain
+
+Historical employee tracking
+
+Promotion example
+
+Before and After comparison
+
+Timeline illustration
+
+------------------------------------------------------------
+
+Slide 8
+
+Implementation Summary
+
+Technology Stack
+
+Database Summary
+
+Dataset Summary
+
+Implementation Statistics
+
+Use professional cards.
+
+------------------------------------------------------------
+
+Slide 9
+
+Business Analytics
+
+Present the four business questions
+
+Use four cards
+
+No SQL
+
+Business-focused wording
+
+------------------------------------------------------------
+
+Slide 10
+
+Oracle Analytics Dashboard
+
+Reserve large placeholders
+
+Department Attrition
+
+Performance Analysis
+
+Replacement Cost
+
+Promotion Trend
+
+Provide captions below each screenshot.
+
+------------------------------------------------------------
+
+Slide 11
+
+Business Insights
+
+Summarize findings
+
+Department with highest attrition
+
+Performance trends
+
+Replacement cost analysis
+
+Promotion effectiveness
+
+Business value
+
+------------------------------------------------------------
+
+Slide 12
+
+Challenges & Learnings
+
+Challenges
+
+Star Schema
+
+Dummy Data
+
+SCD Type 2
+
+Data Consistency
+
+Learnings
+
+Oracle Database
+
+Oracle Analytics Cloud
+
+Business Intelligence
+
+Enterprise Data Warehousing
+
+------------------------------------------------------------
+
+Slide 13
+
+Conclusion
+
+Business Benefits
+
+Centralized analytics
+
+Better HR decision-making
+
+Scalable architecture
+
+Future enhancements
+
+Predictive Analytics
+
+Machine Learning
+
+AI-powered HR recommendations
+
+------------------------------------------------------------
+
+Slide 14
+
+Thank You
+
+Simple premium closing slide.
+
+------------------------------------------------------------
+
+FINAL OUTPUT
+
+The entire presentation should appear as if it was created by an Enterprise Solutions Consultant for executive leadership.
+
+The audience should immediately recognize the presentation as professional, modern, data-driven, and business-focused.
+
+Maintain visual consistency across all slides.
+
+Every slide should tell part of a single business story:
+
+Business Challenge → Objectives → Solution → Architecture → Implementation → Analytics → Business Value → Future Scope.
