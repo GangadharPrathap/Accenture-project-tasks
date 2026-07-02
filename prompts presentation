@@ -1,0 +1,42 @@
+Update the current slide while preserving the existing Accenture template, slide layout, fonts, colors, placeholders, spacing, and overall visual identity.
+
+Do not create a new slide. Modify only the content of the current slide.
+
+Slide Title:
+Business Challenge & Project Objectives
+
+Objective:
+Create a professional executive slide that explains why the HR Analytics project was required and what it aims to achieve. The slide should be suitable for presentation to senior Accenture managers and should use concise business language instead of academic explanations.
+
+Replace the existing placeholder image with a high-quality corporate image showing HR professionals or business leaders analyzing workforce data on dashboards in a modern office environment.
+
+Structure the content into two sections.
+
+Section 1: Business Challenge
+
+Use the following points:
+
+• Employee, performance, and attrition data exist across multiple disconnected systems.
+• Manual reporting makes workforce analysis slow and inefficient.
+• HR teams lack a centralized view of employee performance and attrition trends.
+• Decision-making is delayed due to fragmented and inconsistent data.
+
+Section 2: Project Objectives
+
+Use the following points:
+
+• Build a centralized HR Analytics Data Warehouse.
+• Integrate employee, department, performance, and attrition data.
+• Enable historical employee tracking using SCD Type 2.
+• Develop analytics to answer key HR business questions.
+• Deliver interactive dashboards using Oracle Analytics Cloud.
+
+Design Requirements
+
+• Keep the slide clean and visually balanced.
+• Use concise bullet points.
+• Highlight important keywords such as Centralized Data Warehouse, SCD Type 2, and Oracle Analytics Cloud using the existing Accenture accent color.
+• Use consistent spacing and alignment.
+• Maintain sufficient whitespace.
+• Do not include SQL queries, ER diagrams, or technical implementation details on this slide.
+• The slide should communicate business value and project objectives clearly.
