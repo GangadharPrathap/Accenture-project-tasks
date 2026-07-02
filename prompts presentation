@@ -1,62 +1,74 @@
 Update the next slide in the uploaded Accenture PowerPoint presentation.
 
-IMPORTANT INSTRUCTIONS
+IMPORTANT
 
-• Generate the slide as quickly as possible.
-• Use only the layouts already available in the uploaded Accenture template.
-• Automatically choose the most suitable layout for explaining a solution architecture.
-• Do not create a custom design.
-• Preserve the Accenture theme, fonts, colors, icons, spacing, placeholders, and slide master.
+• Generate the slide quickly.
+• Use only layouts available in the uploaded Accenture template.
+• Automatically select the best layout for introducing a data warehouse architecture.
+• Preserve the existing Accenture branding, fonts, colors, spacing, icons, and slide master.
 • Keep the slide executive, clean, and highly visual.
-• Use SmartArt or process diagrams from the template if appropriate.
+• Do not include the ER diagrams on this slide.
 
 Slide Title
 
-Solution Overview & Architecture
+HR Analytics Data Warehouse Design
 
 Slide Objective
 
-Explain how the proposed HR Analytics solution transforms disconnected HR data into actionable business insights through a centralized data warehouse.
+Introduce the overall dimensional modeling approach before presenting the detailed ER diagrams.
 
-Content
+Main Content
 
-Solution Overview
+Data Warehouse Architecture
 
-The proposed solution integrates multiple HR data sources into a centralized analytics platform to enable consistent reporting, historical tracking, and data-driven decision-making.
+The solution follows a Star Schema architecture designed to support enterprise HR analytics by integrating employee, department, performance, and attrition data into a centralized analytical model.
 
-Architecture Flow
+Data Model Components
 
-Employee Data
-↓
-Performance Review Data
-↓
-Attrition Data
-↓
-ETL / Data Integration
-↓
-Oracle Database (Data Warehouse)
-↓
-Oracle Analytics Cloud
-↓
-Interactive HR Dashboard
+Dimension Tables
 
-Key Capabilities
+• DIM_EMPLOYEE
+• DIM_DEPARTMENT
+• DIM_CALENDER
 
-• Centralized workforce data
-• Historical employee tracking using SCD Type 2
-• Enterprise reporting and analytics
-• Department-wise attrition analysis
-• Performance trend analysis
-• Executive dashboards for HR decision-making
+Fact Tables
 
-Visual Guidance
+• FACT_PERFORMANCE
+• FACT_ATTRITION
 
-• Use a horizontal or vertical process flow from the Accenture template.
-• Replace placeholders with professional business icons representing data sources, database, analytics, and dashboards.
+Design Principles
+
+• Star Schema Architecture
+• Shared Dimensions
+• Surrogate Keys
+• Historical Tracking using SCD Type 2
+• Optimized for Oracle Analytics Cloud reporting
+• Scalable analytical data model
+
+Visual Requirements
+
+Instead of an ER diagram, create a clean conceptual illustration:
+
+Three Dimension Tables
+        ↓
+Shared Across
+        ↓
+FACT_PERFORMANCE      FACT_ATTRITION
+        ↓
+Oracle Analytics Cloud Dashboard
+
+Use simple database icons or SmartArt available within the template.
+
+Design Requirements
+
 • Keep text concise.
-• Emphasize "Centralized Data Warehouse" and "Oracle Analytics Cloud" using the template accent color.
-• Maintain a balance of visuals and text with generous whitespace.
+• Allocate approximately 60% of the slide for the conceptual architecture.
+• Allocate 40% for key design principles.
+• Highlight Star Schema, Shared Dimensions, and SCD Type 2 using the Accenture accent color.
+• No SQL code.
+• No table attributes.
+• No foreign key details.
 
 Final Output
 
-The slide should resemble an Accenture consulting architecture overview prepared for an executive client presentation, focusing on clarity, business value, and professionalism.
+This slide should serve as a high-level introduction before the detailed ER diagrams, similar to an Accenture architecture overview presented during an executive solution walkthrough.
