@@ -1,0 +1,185 @@
+Slide 1 – Title (20–30 sec)
+
+"Good morning everyone.
+
+I am Pratyusha Mohanty, and today I'll be presenting our project Smart City: Energy Consumption Analytics.
+
+This project focuses on using Data Warehousing and Oracle Analytics Cloud to transform raw electricity consumption data into meaningful business insights. The goal is to help city authorities monitor energy usage, identify consumption trends, analyse renewable energy adoption, and make smarter decisions for efficient energy management."
+
+Slide 2 – Table of Contents (10 sec)
+
+"My presentation is divided into five parts. First, I'll discuss the business problem, followed by the project overview and objectives. Then I'll explain the workflow and schema design, after that the granularity and business deliverables, and finally I'll conclude with the business impact."
+
+Slide 3 – Business Problem (1 minute)
+
+"Every modern city generates huge amounts of electricity consumption data every hour from residential, commercial, and industrial properties.
+
+Although this data exists, it is often scattered across different operational systems. Because of this, city administrators find it difficult to identify which areas consume the most energy, when electricity demand peaks, or how effectively renewable energy is being utilized.
+
+Without centralized analytics, planning becomes reactive instead of data-driven.
+
+To solve this challenge, our project provides a centralized analytical platform that stores historical energy data and converts it into meaningful reports and dashboards for decision-making."
+
+If they ask: Why can't OLTP databases do this?
+
+"Operational databases are optimized for day-to-day transactions, whereas analytical systems require historical data, aggregations, and reporting. That's why we use a Data Warehouse."
+
+Slide 4 – Project Overview (1 minute)
+
+"Our objective was not just to store data but to generate actionable insights.
+
+The complete solution consists of Oracle Database, where we built our Data Warehouse, SQL analytical views to process business data, and Oracle Analytics Cloud, which visualizes the results through interactive dashboards.
+
+Using this solution, city authorities can monitor consumption patterns, evaluate renewable energy adoption, and support evidence-based planning for future energy requirements."
+
+If asked why Oracle Analytics Cloud?
+
+"OAC provides interactive dashboards, drill-down capabilities, filtering, and business-friendly visualizations without requiring users to write SQL."
+
+Slide 5 – Business Objectives (45 sec)
+
+"Our project was designed around several business objectives.
+
+These include monitoring electricity consumption across different city zones, comparing residential, commercial, and industrial properties, identifying high-consumption regions, analysing hourly and seasonal trends, measuring renewable energy usage, calculating carbon dioxide offset, and supporting strategic planning through interactive dashboards.
+
+Each dashboard in our project directly addresses one or more of these objectives."
+
+Slide 6 – Workflow & Architecture (1.5 min)
+
+"Now I'll explain the workflow.
+
+The process starts with four major data sources: Property information, Zone information, Energy Source details, and Date & Time information.
+
+These datasets are processed through the ETL pipeline. During ETL, data is extracted, cleaned, transformed into a consistent format, and loaded into the Oracle FreeSQL Database.
+
+Once the data warehouse is ready, SQL queries are used to generate analytical datasets, which are then connected to Oracle Analytics Cloud.
+
+Finally, OAC creates interactive dashboards that are used by city authorities, analysts, and policy makers to monitor energy consumption and make informed decisions."
+
+Possible question: Why ETL?
+
+"Because raw operational data is inconsistent. ETL ensures the data is clean, standardized, and ready for analysis."
+
+Why Oracle Database?
+
+"It provides structured storage, maintains relationships between tables, supports SQL analytics efficiently, and serves as the central data warehouse."
+
+Slide 7 – Schema Design (2 min)
+
+"Our warehouse follows a Star Schema.
+
+At the center is the Energy Consumption Fact table, which stores measurable business metrics such as Units Consumed, Billed Amount, Peak Demand, and CO₂ Offset.
+
+Around it are four dimension tables.
+
+The Property Dimension stores property-related information.
+
+The Zone Dimension stores geographical details.
+
+The Energy Source Dimension stores information about Grid, Solar, Wind, and Generator.
+
+The Day & Hour Dimension stores time attributes like date, month, quarter, season, and hour.
+
+We selected Star Schema because it simplifies joins, improves query performance, and is widely used in Business Intelligence applications."
+
+Why Fact table?
+
+"Fact tables store measurable numeric values."
+
+Why Dimension tables?
+
+"They provide descriptive context that allows us to analyse facts from different perspectives."
+
+Why Star Schema instead of Snowflake?
+
+"Star Schema is simpler, requires fewer joins, and offers faster analytical query performance."
+
+Slide 8 – Granularity (1 minute)
+
+"Our warehouse stores data at an hourly granularity.
+
+This means every record represents energy consumption for a property during a specific hour.
+
+Using hourly data allows us to identify peak demand hours, analyse seasonal consumption patterns, and produce more accurate analytical reports.
+
+Although hourly storage increases data volume compared to daily storage, it provides much richer insights and still allows us to aggregate the data to daily, monthly, or yearly reports whenever required."
+
+Why not daily granularity?
+
+"Daily data loses important hourly information, making it impossible to identify peak demand periods."
+
+Slide 9 – Business Deliverables (30 sec)
+
+"Based on the business requirements, our project answers four analytical questions.
+
+First, identifying the highest energy-consuming zone and property type.
+
+Second, measuring renewable energy contribution.
+
+Third, finding peak demand hours across the city.
+
+Finally, calculating the CO₂ offset achieved through renewable energy usage.
+
+I'll now explain each of these using the dashboards we created."
+
+Slides 10–11 – Dashboard 1 (1 minute)
+
+"This dashboard analyses monthly average energy consumption across different zones and property types.
+
+It enables comparisons between residential, commercial, and industrial properties while also identifying seasonal trends.
+
+From this analysis, administrators can identify high-consumption areas and understand which property categories require better energy management."
+
+If they ask why average instead of total:
+
+"Average consumption removes the effect of unequal record counts and provides a fair comparison between different categories."
+
+Slides 12–13 – Dashboard 2 (1 minute)
+
+"This dashboard focuses on renewable energy.
+
+It calculates renewable energy units, total energy units, and renewable energy percentage for each zone across different quarters.
+
+This helps authorities evaluate renewable energy adoption and compare sustainability progress between different city zones."
+
+Why calculate percentage?
+
+"Percentage provides a normalized comparison, regardless of the total energy consumed."
+
+Slides 14–15 – Dashboard 3 (1 minute)
+
+"This dashboard analyses peak electricity demand.
+
+It calculates average and maximum peak demand for every hour of the day.
+
+Using this information, utility providers can identify the busiest hours, improve load balancing, reduce power shortages, and optimize electricity distribution."
+
+Why average and maximum?
+
+"Average shows regular demand patterns, while maximum highlights extreme peak situations that infrastructure must be able to handle."
+
+Slides 16–17 – Dashboard 4 (1 minute)
+
+"The final dashboard measures the total CO₂ offset generated through renewable energy usage.
+
+It compares zones based on their environmental contribution and helps evaluate the effectiveness of renewable energy initiatives.
+
+This supports sustainability planning and helps authorities measure environmental impact."
+
+How is CO₂ offset useful?
+
+"It quantifies the environmental benefit achieved by replacing conventional energy sources with renewable energy."
+
+Slide 18 – Business Impact (1 minute)
+
+"In conclusion, this project delivers benefits at three levels.
+
+Operationally, it centralizes analytics and reduces manual reporting.
+
+Strategically, it enables better resource allocation, renewable energy monitoring, and peak demand forecasting.
+
+Environmentally, it contributes to lower carbon emissions, improved energy efficiency, and supports sustainable city development.
+
+Overall, this project demonstrates how a Data Warehouse combined with Oracle Analytics Cloud can transform operational energy data into meaningful business intelligence that supports smarter city planning.
+
+Thank you. I'd be happy to answer any questions."
