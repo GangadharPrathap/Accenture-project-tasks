@@ -1,0 +1,190 @@
+Since your evaluation is tomorrow, here's a natural, professional script that you can use. It is written as if you're presenting to Accenture Senior Managers. It sounds conversational rather than memorized.
+
+Slide 1 – Introduction
+
+Good morning everyone.
+
+I am D S S Gangadhara Prathap, and today I am going to present my internship project titled HR Analytics: Employee Performance & Attrition Analysis.
+
+The objective of this project was to build a centralized HR Analytics solution using Oracle Database, Data Warehousing concepts, Oracle SQL, and Oracle Analytics Cloud.
+
+This solution helps HR teams analyze employee performance, monitor attrition trends, estimate replacement costs, and support better workforce decision-making through interactive dashboards.
+
+Slide 2 – Agenda
+
+This presentation is divided into four sections.
+
+First, I will explain the business challenge and project objectives.
+
+Next, I will discuss the solution architecture and data warehouse design.
+
+Then, I will demonstrate how we answered four business questions using SQL views and Oracle Analytics Cloud dashboards.
+
+Finally, I will conclude with the key insights, challenges, learnings, and future enhancements.
+
+Slide 3 – Business Challenge
+
+Let's begin with the business problem.
+
+Organizations maintain employee information, performance reviews, and attrition records in different operational systems.
+
+Because this data is scattered, HR teams find it difficult to identify attrition trends, analyze employee performance, and estimate replacement costs.
+
+As a result, decision-making becomes slow and reporting is mostly manual.
+
+To solve this problem, we developed a centralized HR Analytics Data Warehouse.
+
+Our objectives were to integrate HR data, preserve historical employee information using SCD Type 2, answer business questions through SQL views, and build interactive dashboards using Oracle Analytics Cloud.
+
+Slide 4 – Solution Architecture
+
+This slide shows the overall architecture of our solution.
+
+Employee data, performance data, and attrition data are collected from different source systems.
+
+These datasets pass through an ETL process where the data is extracted, transformed, and loaded into an Oracle Data Warehouse.
+
+Oracle Analytics Cloud then connects to this warehouse and generates interactive dashboards.
+
+This architecture provides centralized reporting, historical analysis, and business insights.
+
+Slide 5 – Data Warehouse Design
+
+For this project, we designed a Star Schema.
+
+We selected Star Schema because it provides faster analytical queries and simpler relationships.
+
+Our warehouse consists of three dimension tables:
+
+DIM_EMPLOYEE
+DIM_DEPARTMENT
+DIM_CALENDER
+
+and two fact tables:
+
+FACT_PERFORMANCE
+FACT_ATTRITION
+
+We also implemented SCD Type 2 in the Employee Dimension to preserve employee history whenever designation changes occurred.
+
+Slide 6 – Performance Analytics Data Model
+
+This ER diagram represents the Performance Data Model.
+
+The FACT_PERFORMANCE table stores employee performance records including rating score, KPI achievement, and promotion status.
+
+It is connected to the shared dimensions through surrogate keys.
+
+This model enables department-wise performance analysis and promotion tracking.
+
+Slide 7 – Attrition Analytics Data Model
+
+This diagram represents the Attrition Data Model.
+
+The FACT_ATTRITION table stores employee exit information, exit reasons, and estimated replacement costs.
+
+It shares the same dimension tables, ensuring consistent reporting across both performance and attrition analytics.
+
+Slide 8 – Business Question 1
+
+The first business question is:
+
+Which department has the highest attrition rate during the last two years?
+
+To answer this, we created a SQL view that joins the Performance Fact, Attrition Fact, Department Dimension, and Calendar Dimension.
+
+We grouped the data department-wise and calculated the attrition rate.
+
+Slide 9 – Dashboard 1
+
+This dashboard displays the department-wise attrition heatmap.
+
+The analysis shows that Finance recorded the highest attrition rate at 30%, followed by Human Resources and Marketing.
+
+Information Technology recorded the lowest attrition.
+
+This insight helps HR identify high-risk departments and implement targeted retention strategies.
+
+Slide 10 – Business Question 2
+
+The second business question is:
+
+How does employee performance relate to employee exits?
+
+To answer this, we selected the latest performance record for each employee and compared it with attrition records.
+
+The SQL view grouped employees based on whether they stayed or exited and summarized the results by performance rating.
+
+Slide 11 – Dashboard 2
+
+This dashboard compares employee performance ratings with employee status.
+
+Across all rating levels, the number of employees who stayed is greater than those who exited.
+
+Interestingly, employees with the highest performance rating also recorded a noticeable number of exits.
+
+This indicates that performance alone does not determine employee attrition.
+
+Other business factors such as career growth, work environment, and compensation also influence employee retention.
+
+Slide 12 – Business Question 3
+
+The third business question is:
+
+What is the total estimated replacement cost by business unit?
+
+To solve this, we filtered attrition data for the last financial year, grouped the data by business unit, and calculated the total replacement cost.
+
+This analysis helps HR estimate the financial impact of employee attrition and improve workforce budgeting.
+
+Slide 13 – Business Question 4
+
+The fourth business question is:
+
+What is the attrition rate of employees within 12 months after promotion?
+
+To answer this question, we first identified employees who received promotions.
+
+Next, we checked whether those employees left the organization within the following 12 months.
+
+Finally, we calculated the attrition rate and grouped the results by promotion year to analyze the trend over multiple years.
+
+This helps HR understand whether promotions are improving employee retention or whether additional engagement initiatives are required after promotion.
+
+Slide 14 – Key Business Insights
+
+From our analysis, we derived four major insights.
+
+First, Finance was identified as the department with the highest attrition rate.
+
+Second, employee performance alone was not the primary reason for employee exits.
+
+Third, replacement cost analysis highlighted the financial impact of employee turnover.
+
+Finally, promotion trend analysis showed that promotions alone do not completely eliminate employee attrition.
+
+These insights support better workforce planning and data-driven HR decisions.
+
+Slide 15 – Challenges & Learnings
+
+During this project, we faced several challenges.
+
+The biggest challenge was implementing SCD Type 2 correctly while maintaining historical employee records.
+
+Another challenge was generating realistic analytical datasets and ensuring accurate relationships between fact and dimension tables.
+
+From this project, I gained practical experience in Data Warehousing, Star Schema Design, Oracle SQL, SCD Type 2 implementation, SQL Views, and Oracle Analytics Cloud dashboard development.
+
+Slide 16 – Conclusion
+
+To conclude,
+
+this project successfully demonstrates how Data Warehousing can transform raw HR data into meaningful business insights.
+
+By integrating employee, performance, and attrition data into a centralized warehouse, we developed dashboards that help HR identify attrition patterns, analyze employee performance, estimate replacement costs, and support strategic workforce planning.
+
+As future enhancements, this solution can be extended by integrating predictive analytics, automated ETL pipelines, and real-time dashboards.
+
+Thank you for your time.
+
+I would be happy to answer any questions.
