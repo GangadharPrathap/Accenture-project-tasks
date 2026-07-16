@@ -1,3 +1,4 @@
+
 Yes. Copilot Studio instructions work better when they're concise. Here's a **compressed enterprise version** that stays well under the typical instruction limits while keeping all critical functionality.
 
 ---
